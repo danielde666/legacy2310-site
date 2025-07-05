@@ -1,13 +1,25 @@
+const endpoint = "https://script.google.com/macros/s/AKfycbxHyXqxAWKAuPfSa2wYF4xTB4ulL-B9sgxqs91We1AU_ykUpFLkVu1RQug-xB_KIdriBQ/exec";
+
 export default async function handler(req, res) {
-    const endpoint = "https://script.google.com/macros/s/AKfycbxHyXqxAWKAuPfSa2wYF4xTB4ulL-B9sgxqs91We1AU_ykUpFLkVu1RQug-xB_KIdriBQ/exec";
-  
-    try {
+  try {
+    if (req.method === 'GET') {
       const response = await fetch(endpoint);
       const data = await response.json();
-      res.status(200).json(data);
-    } catch (error) {
-      console.error("Fetch failed", error);
-      res.status(500).json({ error: "Failed to fetch team data" });
+      return res.status(200).json(data);
+    } else if (req.method === 'POST') {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        body: JSON.stringify(req.body),
+        headers: { 'Content-Type': 'application/json' }
+      });
+      const result = await response.json();
+      return res.status(200).json(result);
+    } else {
+      res.setHeader('Allow', ['GET', 'POST']);
+      return res.status(405).end(`Method ${req.method} Not Allowed`);
     }
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ error: 'Something went wrong' });
   }
-  
+}
