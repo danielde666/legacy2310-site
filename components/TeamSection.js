@@ -19,7 +19,7 @@ export default function TeamSection() {
             <img
               src={member.photo}
               alt={member.name}
-              className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white"
+              className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white bg-white"
             />
             <div className="text-xl font-semibold">{member.name}</div>
             <div className="text-gray-400">{member.role}</div>

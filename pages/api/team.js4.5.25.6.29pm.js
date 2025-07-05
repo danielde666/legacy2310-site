@@ -1,4 +1,3 @@
-
 import fs from 'fs';
 import path from 'path';
 
@@ -9,15 +8,8 @@ export default function handler(req, res) {
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const team = JSON.parse(fileContents);
     res.status(200).json(team);
-  } else if (req.method === 'POST') {
-    try {
-      fs.writeFileSync(filePath, JSON.stringify(req.body, null, 2));
-      res.status(200).json({ message: 'Team updated successfully' });
-    } catch (err) {
-      res.status(500).json({ error: 'Error saving team data' });
-    }
   } else {
-    res.setHeader('Allow', ['GET', 'POST']);
+    res.setHeader('Allow', ['GET']);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }
