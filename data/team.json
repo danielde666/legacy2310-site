@@ -1,0 +1,21 @@
+[
+    {
+      "name": "Rick Nazar",
+      "role": "CEO",
+      "email": "rick@legacy2310.com",
+      "photo": "/images/rick.jpg"
+    },
+    {
+      "name": "Daniel De La Rosa",
+      "role": "CTO",
+      "email": "daniel@legacy2310.com",
+      "photo": "/images/daniel.jpg"
+    },
+    {
+      "name": "Jeffrey Beistman",
+      "role": "Creative Director",
+      "email": "jeffrey@legacy2310.com",
+      "photo": "/images/jeffrey.jpg"
+    }
+  ]
+  
