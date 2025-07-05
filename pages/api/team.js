@@ -9,8 +9,8 @@ export default async function handler(req, res) {
     } else if (req.method === 'POST') {
       const response = await fetch(endpoint, {
         method: 'POST',
-        body: JSON.stringify(req.body),
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(req.body)
       });
       const result = await response.json();
       return res.status(200).json(result);
