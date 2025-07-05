@@ -1,21 +1,20 @@
 [
-    {
-      "name": "Rick Nazar",
-      "role": "CEO",
-      "email": "rick@legacy2310.com",
-      "photo": "/rick.png"
-    },
-    {
-      "name": "Daniel De La Rosa",
-      "role": "CTO",
-      "email": "daniel@legacy2310.com",
-      "photo": "/dan.png"
-    },
-    {
-      "name": "Jeffrey Beistman",
-      "role": "Creative Director",
-      "email": "jeffrey@legacy2310.com",
-      "photo": "/jeff.png"
-    }
-  ]
-  
+  {
+    "name": "Rick Nazar",
+    "role": "CEO",
+    "email": "rick@legacy2310.com",
+    "photo": "/rick.png"
+  },
+  {
+    "name": "Daniel De La Rosa",
+    "role": "CTO",
+    "email": "daniel@legacy2310.com",
+    "photo": "/dan.png"
+  },
+  {
+    "name": "Jeffrey Beistman",
+    "role": "CCO",
+    "email": "jeffrey@legacy2310.com",
+    "photo": "/jeff.png"
+  }
+]
