@@ -1,6 +1,8 @@
 
 import ContactModal from '../components/ContactModal'
 import { motion } from 'framer-motion';
+import TeamSection from '../components/TeamSection';
+
 
 export default function Home() {
   return (
@@ -21,6 +23,11 @@ export default function Home() {
           <ContactModal />
         </div>
       </section>
+
+      
+      <TeamSection />
+
+      
 
       <section className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
         <div className="bg-neutral-900 p-6 rounded-2xl border border-neutral-700">
