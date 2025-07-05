@@ -1,14 +1,18 @@
-
 import { useEffect, useState } from 'react';
 
 export default function AdminTeam() {
   const [team, setTeam] = useState([]);
-  const [status, setStatus] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [status, setStatus] = useState('');
 
   useEffect(() => {
     fetch('/api/team')
-      .then((res) => res.json())
-      .then(setTeam);
+      .then(res => res.json())
+      .then(data => {
+        setTeam(data);
+        setLoading(false);
+      });
   }, []);
 
   const handleChange = (index, field, value) => {
@@ -18,18 +22,53 @@ export default function AdminTeam() {
   };
 
   const handleSave = async () => {
+    setSaving(true);
+    setStatus('');
+
     const res = await fetch('/api/team', {
       method: 'POST',
-      body: JSON.stringify(team),
-      headers: { 'Content-Type': 'application/json' }
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(team)
     });
+
     const result = await res.json();
-    setStatus(result.message || 'Saved');
+    setSaving(false);
+    setStatus(result.message || '✅ Saved!');
   };
 
+  if (loading || saving) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-black text-white">
+        <svg className="animate-spin h-10 w-10 text-white" viewBox="0 0 24 24">
+          <circle
+            className="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            strokeWidth="4"
+            fill="none"
+          />
+          <path
+            className="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8v8z"
+          />
+        </svg>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen p-8 bg-black text-white space-y-8">
+    <div className="animate-fade-in transition-opacity duration-700 min-h-screen p-8 bg-black text-white space-y-8">
       <h1 className="text-3xl font-bold">Team Editor</h1>
+
+      {status && (
+        <div className="text-green-400 text-sm mb-4 animate-fade-in">
+          {status}
+        </div>
+      )}
+
       {team.map((member, i) => (
         <div key={i} className="space-y-2 border-b border-gray-700 pb-6">
           <input
@@ -62,13 +101,13 @@ export default function AdminTeam() {
           />
         </div>
       ))}
+
       <button
         onClick={handleSave}
         className="bg-white text-black font-bold px-6 py-2 rounded-lg hover:bg-gray-200"
       >
         Save Changes
       </button>
-      {status && <div className="text-green-400 pt-2">{status}</div>}
     </div>
   );
 }
