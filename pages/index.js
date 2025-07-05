@@ -22,28 +22,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="text-center max-w-4xl mx-auto space-y-6">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-5xl md:text-7xl font-bold"
-        >
-          We Wrap Companies
-        </motion.h1>
-        <p className="text-xl md:text-2xl text-gray-300">
-          Your core. Wrapped in future.
-        </p>
-        <div className="flex justify-center gap-4 pt-6">
-          <button className="px-6 py-2 bg-white text-black font-semibold rounded-xl hover:bg-gray-200 transition">
-            Book Consultation
-          </button>
-          <button className="px-6 py-2 border border-white text-white rounded-xl hover:bg-white hover:text-black transition">
-            Explore Services
-          </button>
-        </div>
-      </section>
-
       <section className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
         <div className="bg-neutral-900 p-6 rounded-2xl border border-neutral-700">
           <h2 className="text-2xl font-semibold mb-4">External Wrap</h2>
@@ -76,7 +54,7 @@ export default function Home() {
         </button>
       </section>
 
-      
+
     </main>
   );
 }
