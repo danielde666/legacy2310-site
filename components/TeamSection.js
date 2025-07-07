@@ -33,6 +33,11 @@ export default function TeamSection() {
             <h3 className="text-xl font-semibold">{member.name}</h3>
             <p className="text-gray-400">{member.role}</p>
             <p className="text-sm text-gray-500">{member.email}</p>
+            <div
+              className="text-sm text-gray-300 prose prose-invert max-w-none"
+              dangerouslySetInnerHTML={{ __html: member.description }}
+            />
+
           </div>
         ))}
       </div>

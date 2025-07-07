@@ -1,4 +1,8 @@
 import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+import 'react-quill/dist/quill.snow.css';
+
 
 export default function AdminTeam() {
   const [team, setTeam] = useState([]);
@@ -36,18 +40,24 @@ export default function AdminTeam() {
     setStatus(result.message || '✅ Saved!');
   };
 
+
+  const addMember = () => {
+    setTeam([...team, { name: '', role: '', email: '', photo: '', description: '' }]);
+  };
+  
+  const deleteMember = (index) => {
+    const updated = [...team];
+    updated.splice(index, 1);
+    setTeam(updated);
+  };
+  
+
   if (loading || saving) {
     return (
     
       <div className="min-h-screen flex items-center justify-center bg-black text-white">
-      <div style={{
-        width: "48px",
-        height: "48px",
-        border: "4px solid rgba(255,255,255,0.2)",
-        borderTopColor: "white",
-        borderRadius: "50%",
-        animation: "spin 1s linear infinite"
-      }} />
+    <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full spin" />
+
     </div>
     
     
@@ -96,7 +106,18 @@ export default function AdminTeam() {
             placeholder="Image URL"
             className="w-full bg-zinc-900 p-2 rounded"
           />
+         <label className="block text-sm text-gray-400">Bio / Description</label>
+        <ReactQuill
+          value={member.description || ''}
+          onChange={(val) => handleChange(i, 'description', val)}
+          theme="snow"
+          className="bg-white text-black rounded"
+          style={{ minHeight: '120px' }}
+        />
+        <button onClick={() => deleteMember(i)} className="text-xs text-red-400">Remove</button>
+
         </div>
+        
       ))}
 
       <button
@@ -105,6 +126,9 @@ export default function AdminTeam() {
       >
         Save Changes
       </button>
+
+      <button onClick={addMember} className="text-sm text-blue-400">+ Add Member</button>
+
     </div>
   );
 }
