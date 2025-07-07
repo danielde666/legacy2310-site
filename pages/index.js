@@ -25,7 +25,6 @@ export default function Home() {
       </section>
 
       
-      <TeamSection />
 
       
 
@@ -61,6 +60,8 @@ export default function Home() {
         </button>
       </section>
 
+
+      <TeamSection />
 
     </main>
   );
