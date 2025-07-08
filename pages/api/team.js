@@ -1,4 +1,4 @@
-const endpoint = "https://script.google.com/macros/s/AKfycbxHyXqxAWKAuPfSa2wYF4xTB4ulL-B9sgxqs91We1AU_ykUpFLkVu1RQug-xB_KIdriBQ/exec";
+const endpoint = "https://script.google.com/macros/s/AKfycbw6sGLiW7HEahvCiy51hFYlXWvv2IFaU-rcqmkO2SwOg-M_v9Yy7Az2bxCq7udW57Aehw/exec";
 
 export default async function handler(req, res) {
   try {
