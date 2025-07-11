@@ -6,6 +6,48 @@
 body {
   @apply text-white;
   background: radial-gradient(circle at top left, #1f1f1f, #0a0a0a);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  font-family: 'Founders Grotesk Regular', Arial, Helvetica, sans-serif;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {
+  font-family: 'Founders Grotesk Regular', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: -.02rem;
+}
+
+.medium {
+  font-family: 'Founders Grotesk Medium', Arial, Helvetica, sans-serif;
+}
+
+.medium-italic {
+  font-family: 'Founders Grotesk Medium', Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+.regular {
+  font-family: 'Founders Grotesk Regular', Arial, Helvetica, sans-serif;
+}
+
+.regular-italic {
+  font-family: 'Founders Grotesk Regular', Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+p {
+  font-family: 'Founders Grotesk Regular', Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  letter-spacing: 0rem;
+  font-size: 12px;
 }
 
 /* Hide cursor when custom cursor is active */
@@ -17,6 +59,17 @@ body.custom-cursor-active * {
   cursor: none !important;
 }
 
+
+.splash{
+  display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    font-size: 8vw;
+}
 
 @keyframes spin {
   to { transform: rotate(360deg); }
