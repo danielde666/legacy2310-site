@@ -19,9 +19,7 @@
 .xenoPage figure, .xenoPage figcaption, .xenoPage footer, .xenoPage hgroup,
 .xenoPage menu, .xenoPage nav, .xenoPage output, .xenoPage ruby, .xenoPage section, .xenoPage summary,
 .xenoPage time, .xenoPage mark, .xenoPage audio, .xenoPage video {
-    margin: 0;
-    padding: 0;
-    border: 0;
+  
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
@@ -279,21 +277,16 @@
     /* border-bottom: 2px solid var(--border-color); */
     padding-bottom: 6px;
     max-width: 100%;
-    width: 800px;
-    margin: 60px auto 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+   
+    margin: 60px 0 20px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
-.xenoPage h3 {
-    margin: 0px auto 0px;
-    padding: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
+
 
 .xenoPage table {
-    width: 800px;
+   
     border-collapse: collapse;
     max-width: 100%;
     margin: 30px auto;
@@ -311,7 +304,7 @@
 }
 
 .xenoPage .section p {
-    width: 800px;
+   
     border-collapse: collapse;
     max-width: 100%;
     margin: 0px auto;
@@ -321,7 +314,7 @@
 
 .xenoPage .top-info {
     max-width: 100%;
-    width: 800px;
+   
     margin: 0 auto 40px;
     display: block;
     padding-left: 20px;
@@ -550,4 +543,19 @@
         width: 100%;
         min-width: 300px;
     }
+} 
+
+/* Main content container for xeno page */
+.mainContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .mainContainer {
+    padding: 0 0.5rem 2rem 0.5rem;
+  }
 } 
