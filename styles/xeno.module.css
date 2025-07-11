@@ -1,0 +1,553 @@
+/* Xeno Page Specific Styles */
+.xenoPage * {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-smooth: always;
+}
+
+/* CSS Reset - excluding header to preserve Header component styling */
+.xenoPage div, .xenoPage span, .xenoPage applet, .xenoPage object, .xenoPage iframe,
+.xenoPage h1, .xenoPage h2, .xenoPage h3, .xenoPage h4, .xenoPage h5, .xenoPage h6, .xenoPage p, .xenoPage blockquote, .xenoPage pre,
+.xenoPage a, .xenoPage abbr, .xenoPage acronym, .xenoPage address, .xenoPage big, .xenoPage cite, .xenoPage code,
+.xenoPage del, .xenoPage dfn, .xenoPage em, .xenoPage img, .xenoPage ins, .xenoPage kbd, .xenoPage q, .xenoPage s, .xenoPage samp,
+.xenoPage small, .xenoPage strike, .xenoPage strong, .xenoPage sub, .xenoPage sup, .xenoPage tt, .xenoPage var,
+.xenoPage b, .xenoPage u, .xenoPage i, .xenoPage center,
+.xenoPage dl, .xenoPage dt, .xenoPage dd, .xenoPage ol, .xenoPage ul, .xenoPage li,
+.xenoPage fieldset, .xenoPage form, .xenoPage label, .xenoPage legend,
+.xenoPage table, .xenoPage caption, .xenoPage tbody, .xenoPage tfoot, .xenoPage thead, .xenoPage tr, .xenoPage th, .xenoPage td,
+.xenoPage article, .xenoPage aside, .xenoPage canvas, .xenoPage details, .xenoPage embed,
+.xenoPage figure, .xenoPage figcaption, .xenoPage footer, .xenoPage hgroup,
+.xenoPage menu, .xenoPage nav, .xenoPage output, .xenoPage ruby, .xenoPage section, .xenoPage summary,
+.xenoPage time, .xenoPage mark, .xenoPage audio, .xenoPage video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Founders Grotesk Regular', Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* HTML5 display-role reset for older browsers */
+.xenoPage article, .xenoPage aside, .xenoPage details, .xenoPage figcaption, .xenoPage figure,
+.xenoPage footer, .xenoPage hgroup, .xenoPage menu, .xenoPage nav, .xenoPage section {
+    display: block;
+}
+
+.xenoPage ol, .xenoPage ul {
+    list-style: none;
+}
+
+.xenoPage blockquote, .xenoPage q {
+    quotes: none;
+}
+
+.xenoPage blockquote:before, .xenoPage blockquote:after,
+.xenoPage q:before, .xenoPage q:after {
+    content: '';
+    content: none;
+}
+
+.xenoPage table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* demo styles - modified for dark theme */
+
+.xenoPage .page {
+    background: transparent;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.xenoPage .demo {
+    min-height: calc(100vh - 8rem);
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 4rem;
+    overflow: scroll;
+}
+
+.xenoPage .font-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 40px;
+    line-height: 1.3;
+    white-space: nowrap;
+    padding-bottom: 5px;
+}
+
+.xenoPage .letters {
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+.xenoPage pre {
+    display: block;
+    padding: 9px;
+    margin: 0 0 12px;
+    font-family: Menlo,mono;
+    font-size: 10px;
+    line-height: 1.428571429;
+    font-weight: normal;
+    font-style: normal;
+    overflow-x: auto;
+    border: 1px solid rgba(255,255,255,.1);
+}
+
+.xenoPage h1, .xenoPage .h1,
+.xenoPage h2, .xenoPage .h2,
+.xenoPage h3, .xenoPage .h3,
+.xenoPage h4, .xenoPage .h4,
+.xenoPage h5, .xenoPage .h5 {
+    font-family: 'Founders Grotesk Regular', Arial, Helvetica, sans-serif; 
+    font-weight: normal; 
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: -.02rem;
+}
+
+.xenoPage .header h2,
+.xenoPage .logo span {
+    font-family: 'Founders Grotesk Regular', Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: -.02rem;
+    color: #ffffff;
+    padding: 0;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    left: 0;
+}
+
+.xenoPage .header {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 4rem;
+}
+
+.xenoPage .header h2 {
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+    top: 0px;
+}
+
+.xenoPage h1, .xenoPage .h1,
+.xenoPage h2, .xenoPage .h2,
+.xenoPage h3, .xenoPage .h3,
+.xenoPage h4, .xenoPage .h4,
+.xenoPage h5, .xenoPage .h5 {
+    font-family: 'Founders Grotesk Regular', Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: -.02rem;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.xenoPage .hero {
+    font-family: 'Founders Grotesk Regular', Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: -.06rem;
+    color: #ffffff;
+    padding: 4rem 0;
+    font-size: 36px;
+}
+
+.xenoPage .medium {
+    font-family: 'Founders Grotesk Medium', Arial, Helvetica, sans-serif;
+}
+
+.xenoPage .medium-italic {
+    font-family: 'Founders Grotesk Medium', Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.xenoPage .regular {
+    font-family: 'Founders Grotesk Regular', Arial, Helvetica, sans-serif;
+}
+
+.xenoPage .regular-italic {
+    font-family: 'Founders Grotesk Regular', Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.xenoPage p {
+    font-family: 'Founders Grotesk Regular', Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: 0rem;
+    color: #ffffff;
+    padding: 10px 0px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.xenoPage a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.xenoPage a:hover {
+    text-decoration: underline;
+}
+
+.xenoPage strong, .xenoPage b {
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.xenoPage marquee *,
+.xenoPage footer *, .xenoPage footer { 
+    font-family: 'Founders Grotesk Regular', Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: 0rem;
+    color: #ffffff;
+    padding: 0;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.xenoPage footer {
+    padding: 10px 0px;
+}
+
+.xenoPage marquee {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    margin: 0 -20px;
+    padding: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.xenoPage .mockup {
+    width: calc(100% - 60px);
+    height: auto;
+    display: block;
+    transition: all .5s linear;
+    margin: 20px;
+}
+
+.xenoPage .right {
+    /* float: right; */
+}
+
+.xenoPage .right::before {
+    clear: both;
+    content: " ";
+}
+
+/* CSS Variables for dark theme */
+.xenoPage :root {
+    --font-sans: system-ui, sans-serif;
+    --text-color: #ffffff;
+    --accent: #0066cc;
+    --border-color: #333333;
+    --desktop-width: 600px;
+    --mobile-width: 300px;
+}
+
+
+
+.xenoPage p {
+    margin: 8px 0;
+}
+
+.xenoPage h1, .xenoPage h2, .xenoPage h3 {
+    font-weight: normal;
+    /* border-bottom: 2px solid var(--border-color); */
+    padding-bottom: 6px;
+    max-width: 100%;
+    width: 800px;
+    margin: 60px auto 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.xenoPage h3 {
+    margin: 0px auto 0px;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.xenoPage table {
+    width: 800px;
+    border-collapse: collapse;
+    max-width: 100%;
+    margin: 30px auto;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.xenoPage img.heading {
+    width: 600px;
+    max-width: 100%;
+    margin: 20px auto;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.xenoPage .section p {
+    width: 800px;
+    border-collapse: collapse;
+    max-width: 100%;
+    margin: 0px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.xenoPage .top-info {
+    max-width: 100%;
+    width: 800px;
+    margin: 0 auto 40px;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.xenoPage thead th {
+    text-align: left;
+    font-size: 14px;
+    color: #cccccc;
+    border-bottom: 2px solid var(--border-color);
+    padding: 12px 0;
+}
+
+.xenoPage td {
+    padding: 18px 0;
+    font-size: 12px;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.xenoPage .total td {
+    font-family: 'Founders Grotesk Medium', Arial, Helvetica, sans-serif;
+}
+
+.xenoPage .total td {
+    font-weight: normal;
+    font-size: 14px !important;
+    border: none;
+    padding-top: 10px;
+}
+
+.xenoPage .right {
+    text-align: right;
+}
+
+.xenoPage .total {
+    font-weight: normal;
+}
+
+.xenoPage a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.xenoPage a:hover {
+    text-decoration: underline;
+}
+
+.xenoPage .section {
+    margin-top: 80px;
+    margin-bottom: 120px;
+}
+
+.xenoPage .description {
+    color: #cccccc;
+}
+
+.xenoPage td {
+    padding: 10px 3px;
+}
+
+.xenoPage .project {
+    margin-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.xenoPage .images {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    padding-left: 9rem;
+}
+
+.xenoPage .image img {
+    margin: 2rem auto;
+    display: block;
+    height: 70vh;
+    object-fit: contain;
+    width: 100%;
+    min-width: 800px;
+}
+
+.xenoPage .btn {
+    border: 1px solid #0066cc;
+    padding: 14px 20px 10px;
+    display: block;
+    width: 100px;
+    text-align: center;
+    float: right;
+}
+
+.xenoPage .btn:hover {
+    text-decoration: none;
+    background-color: #0066cc;
+    color: #fff;
+}
+
+.xenoPage h3 {
+    border-bottom: none;
+    margin-bottom: 0px;
+}
+
+/* responsive */
+@media (max-width: 990px) {
+    .xenoPage .mockup {
+        padding: 10px;
+        max-width: calc(100% - 20px);
+        object-fit: contain;
+    }
+}
+
+.xenoPage .splash {
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.xenoPage .splash span {
+    font-family: 'Founders Grotesk Medium', Arial, Helvetica, sans-serif;
+    font-size: 9vw;
+    line-height: 7vw;
+    display: block;
+}
+
+@media (max-width: 990px) {
+    .xenoPage .page {
+        width: auto;
+        margin: 0;
+    }
+
+    .xenoPage .header {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .xenoPage .mockup {
+        padding: 5px;
+        max-width: calc(100% - 10px);
+        height: auto;
+        object-fit: contain;
+    }
+
+    .xenoPage h1, .xenoPage h2, .xenoPage h3 {
+        font-weight: normal;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 6px;
+        max-width: 100%;
+        width: calc(100% - 50px);
+        margin: 60px auto 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .xenoPage h3 {
+        border-bottom: none;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .xenoPage table {
+        width: calc(100% - 50px);
+        border-collapse: collapse;
+        max-width: 100%;
+        margin: 30px auto;
+        padding-left: 0px;
+        padding-right: 0px;
+        display: block;
+    }
+
+    .xenoPage img.heading {
+        width: 300px;
+        max-width: 100%;
+        margin: 20px auto;
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .xenoPage .section p {
+        width: calc(100% - 50px);
+        border-collapse: collapse;
+        max-width: 100%;
+        margin: 0px auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .xenoPage .top-info {
+        width: calc(100% - 50px);
+        margin: 0 auto 40px;
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .xenoPage .description {
+        width: auto;
+    }
+
+    .xenoPage .images {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        padding-left: 0;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .xenoPage .images::-webkit-scrollbar {
+        display: none;
+    }
+
+    .xenoPage .image img {
+        margin: 2rem auto;
+        display: block;
+        height: 40vh;
+        object-fit: contain;
+        width: 100%;
+        min-width: 300px;
+    }
+} 

@@ -8,6 +8,15 @@ body {
   background: radial-gradient(circle at top left, #1f1f1f, #0a0a0a);
 }
 
+/* Hide cursor when custom cursor is active */
+body.custom-cursor-active {
+  cursor: none !important;
+}
+
+body.custom-cursor-active * {
+  cursor: none !important;
+}
+
 
 @keyframes spin {
   to { transform: rotate(360deg); }
@@ -22,3 +31,10 @@ body {
 .spin {
   animation: spin 1s linear infinite;
 }
+
+
+
+
+
+
+
