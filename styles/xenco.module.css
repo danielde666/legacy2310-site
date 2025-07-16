@@ -447,103 +447,6 @@
     display: block;
 }
 
-@media (max-width: 990px) {
-    .xencoPage .page {
-        width: auto;
-        margin: 0;
-    }
-
-    .xencoPage .header {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 20px;
-    }
-
-    .xencoPage .mockup {
-        padding: 5px;
-        max-width: calc(100% - 10px);
-        height: auto;
-        object-fit: contain;
-    }
-
-    .xencoPage h1, .xencoPage h2, .xencoPage h3 {
-        font-weight: normal;
-        border-bottom: 2px solid var(--border-color);
-        padding-bottom: 6px;
-        max-width: 100%;
-        
-        margin: 60px auto 20px;
-    }
-
-    .xencoPage h3 {
-        border-bottom: none;
-        margin-bottom: 0px;
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
-
-    .xencoPage table {
-        
-        border-collapse: collapse;
-        max-width: 100%;
-        margin: 30px auto;
-        padding-left: 0px;
-        padding-right: 0px;
-        display: block;
-    }
-
-    .xencoPage img.heading {
-        width: 300px;
-        max-width: 100%;
-        margin: 20px auto;
-        display: block;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .xencoPage .section p {
-        
-        border-collapse: collapse;
-        max-width: 100%;
-        margin: 0px auto;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .xencoPage .top-info {
-        
-        margin: 0 auto 40px;
-        display: block;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .xencoPage .description {
-        width: auto;
-    }
-
-    .xencoPage .images {
-        display: flex;
-        width: 100%;
-        overflow-x: auto;
-        padding-left: 0;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .xencoPage .images::-webkit-scrollbar {
-        display: none;
-    }
-
-    .xencoPage .image img {
-        margin: 2rem auto;
-        display: block;
-        height: 40vh;
-        object-fit: contain;
-        width: 100%;
-        min-width: 300px;
-    }
-} 
 
 /* Main content container for xenco page */
 .mainContainer {
@@ -676,4 +579,103 @@
   .section {
     padding: 1.5rem 0.7rem !important;
   }
+} 
+
+
+@media (max-width: 990px) {
+    .xencoPage .page {
+        width: auto;
+        margin: 0;
+    }
+
+    .xencoPage .header {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .xencoPage .mockup {
+        padding: 5px;
+        max-width: calc(100% - 10px);
+        height: auto;
+        object-fit: contain;
+    }
+
+    .xencoPage h1, .xencoPage h2, .xencoPage h3 {
+        font-weight: normal;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 6px;
+        max-width: 100%;
+        padding-top: 0px;
+        margin: 0px auto 20px;
+    }
+
+    .xencoPage h3 {
+        border-bottom: none;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .xencoPage table {
+        
+        border-collapse: collapse;
+        max-width: 100%;
+        margin: 30px auto;
+        padding-left: 0px;
+        padding-right: 0px;
+        display: block;
+    }
+
+    .xencoPage img.heading {
+        width: 300px;
+        max-width: 100%;
+        margin: 20px auto;
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .xencoPage .section p {
+        
+        border-collapse: collapse;
+        max-width: 100%;
+        margin: 0px auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .xencoPage .top-info {
+        
+        margin: 0 auto 40px;
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .xencoPage .description {
+        width: auto;
+    }
+
+    .xencoPage .images {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        padding-left: 0;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .xencoPage .images::-webkit-scrollbar {
+        display: none;
+    }
+
+    .xencoPage .image img {
+        margin: 2rem auto;
+        display: block;
+        height: 40vh;
+        object-fit: contain;
+        width: 100%;
+        min-width: 300px;
+    }
 } 
