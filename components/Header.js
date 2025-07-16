@@ -35,10 +35,11 @@ export default function Header() {
               ✕
             </button>
             <nav className="space-y-6 text-2xl">
-              <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-              <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
-              <a href="#team" onClick={() => setMenuOpen(false)}>Team</a>
-              <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+            <img
+                src='../aiwrap-white.svg'
+                alt='Ai Wrap'
+                className="w-24 h-24 mx-auto object-contain"
+            />
             </nav>
           </motion.div>
         )}

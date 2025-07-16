@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
         {/* Open Graph */}
         <meta property="og:title" content="Legacy 2310 – We Wrap Companies" />
         <meta property="og:description" content="Rebranding agency using AI, design, and development to transform companies from within." />
-        <meta property="og:image" content="https://legacy2310-site.vercel.app/og-image.jpg" />
+        <meta property="og:image" content="/xenco-p.png" />
         <meta property="og:url" content="https://legacy2310-site.vercel.app" />
         <meta property="og:type" content="website" />
 
@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Legacy 2310 – We Wrap Companies" />
         <meta name="twitter:description" content="We use AI, design, and development to reimagine your company inside and out." />
-        <meta name="twitter:image" content="https://legacy2310-site.vercel.app/og-image.jpg" />
+        <meta name="twitter:image" content="/xenco-p.png" />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
