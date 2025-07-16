@@ -21,7 +21,7 @@ export default function Proposal() {
 
         <div className={styles.mainContainer}>
           {/* Proposal Title and Info */}
-          <div className="top-info">
+          <div className={styles.topinfo}>
             <h1 style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>PHASE ONE: SURGEON NETWORK AND DATA FORUM</h1>
             <p>
               <strong>Prepared for:</strong> Xenco Medical<br />
@@ -67,10 +67,10 @@ This proposal will focus on the first phase of the project, the surgeon network 
               <li>Allow surgeons to share their data and insights with each other</li>
               <li>Allow surgeons to create profiles and upload x-rays, and other medical images</li>
               <li>Allow surgeons to comment on, tag, and interact with each other's data/posts</li>
-              <li>Once data is uploaded, it will be stored in a secure database</li>
-              <li>Verified Data will grant access to XENAI models.</li>
-              <li>Encourage discovery and organic engagement.</li>
-              <li>Organically recruit and foster surgeon pride and ownership.</li>
+              <li>Data uploaded and stored in a secure database</li>
+              <li>Verified Data will grant access to XENAI models</li>
+              <li>Encourage discovery and organic engagement</li>
+              <li>Organically recruit and foster surgeon pride and ownership</li>
             </ol>
           </motion.section>
 
@@ -83,7 +83,7 @@ This proposal will focus on the first phase of the project, the surgeon network 
             transition={{ duration: 0.6, delay: 0.4 }}
             className={styles.section}
           >
-            <h2>4. Timeline</h2>
+            <h2>3. Timeline</h2>
             <p>Estimated timeline: 9 weeks<br />
             Starts: 7/21/2025<br />
             Launch Goal: 9/22/2025</p>
@@ -96,7 +96,7 @@ This proposal will focus on the first phase of the project, the surgeon network 
             transition={{ duration: 0.6, delay: 0.5 }}
             className={styles.section}
           >
-            <h2>5. Pricing</h2>
+            <h2>4. Pricing</h2>
             <p>Total Project Fee: $50,000</p>
           </motion.section>
 
@@ -107,7 +107,7 @@ This proposal will focus on the first phase of the project, the surgeon network 
             transition={{ duration: 0.6, delay: 0.35 }}
             className={`${styles.section} ${styles.timelineOuterSection}`}
           >
-            <h2>Detailed Timeline</h2>
+            <h2>5. SCOPE OF WORK AND DETAILED TIMELINE</h2>
             {/* Weeks 1-2 */}
             <div className={`${styles.timelineWeekContainer} ${styles.section}`}>
               <h3>Weeks 1-2</h3>
@@ -207,7 +207,11 @@ This proposal will focus on the first phase of the project, the surgeon network 
                 <div className={styles.timelineColumn}>
                   <ul>
                     <li>Launch preparation</li>
-                    <li>Official V1 launch</li>
+                  </ul>
+                </div>
+                <div className={styles.timelineColumn}>
+                  <ul>
+                    <li>v1.0 Launch</li>
                   </ul>
                 </div>
               </div>
@@ -230,6 +234,35 @@ This proposal will focus on the first phase of the project, the surgeon network 
 
 
 
+
+
+
+          {/* Next Phases / Tranches */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className={styles.section}
+          >
+            <h2>6. Future Phases / Tranches</h2>
+            <ol>
+              <li>Phase 2 of forum and surgeon network
+                <ul>
+                  <li>+ Exclusive sections</li>
+                  <li>+ Personal pages</li>
+                  <li>+ Blockchain connection</li>
+                </ul>
+              </li>
+              <li><br></br>Complete front-end Xenco website redesign and multimedia marketing campaigns</li>
+              <li><br></br>Internal integration of surgeon forum as admin system</li>
+              <li><br></br>Progress assessment and forecasting</li>
+            </ol>
+          </motion.section>
+
+
+
+
+
           {/* 7. Next Steps */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
@@ -248,47 +281,6 @@ This proposal will focus on the first phase of the project, the surgeon network 
 
 
 
-
-          {/* Rebrand Details */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className={styles.section}
-          >
-            <h2>Rebrand</h2>
-            <h3>Includes:</h3>
-            <ul>
-              <li>Brand strategy & positioning</li>
-              <li>Logo redesign</li>
-              <li>Visual identity (color, fonts, iconography)</li>
-              <li>Messaging & tone (tagline, elevator pitch)</li>
-              <li>Website redesign</li>
-              <li>Brand guidelines</li>
-              <li>Surgeon/Patient-facing collateral (brochure, signage, business cards – custom illustrated)</li>
-              <li>Stakeholder interviews / Surgeon Personas</li>
-              <li>Full UX/UI Audit</li>
-              <li>Surgeon/Patient portal interface design</li>
-              <li>HIPAA – compliant messaging & forms</li>
-              <li>Launch Rollout Strategy</li>
-              <li>Staff onboarding assets</li>
-            </ul>
-            <h3>Pricing variables:</h3>
-            <ol>
-              <li>Digital assets (Web/App) – HIGHER $$</li>
-              <li>Urgency/Timeline – fast turnaround – PREMIUM $$</li>
-              <li>Marketing Materials (brochures, email templates, ads) – Add-ons…</li>
-            </ol>
-            <h3>Add-on Services:</h3>
-            <ul>
-              <li>Surgeon/patient acquisition campaigns</li>
-              <li>SEO for health keywords</li>
-              <li>Meeting interface redesign</li>
-              <li>AI Chatbot integration</li>
-              <li>Social media templates</li>
-              <li>Custom photography/headshots/illustrated personas</li>
-            </ul>
-          </motion.section>
         </div>
       </main>
     </>
