@@ -2,8 +2,17 @@
 import '../styles/globals.css'
 import Head from 'next/head'
 import CustomCursor from '../components/CustomCursor'
+import { useEffect, useState } from 'react'
 
 export default function App({ Component, pageProps }) {
+  const [showCursor, setShowCursor] = useState(false);
+
+  useEffect(() => {
+    // Basic mobile detection
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile|BlackBerry/i.test(navigator.userAgent);
+    setShowCursor(!isMobile);
+  }, []);
+
   return (
     <>
       <Head>
@@ -32,7 +41,7 @@ export default function App({ Component, pageProps }) {
         <link href="https://www.beingl.ink/files/jii-management/fonts/web/foundersgrotesk.css" rel="stylesheet" />
       </Head>
 
-      <CustomCursor />
+      {showCursor && <CustomCursor />}
       <Component {...pageProps} />
     </>
   )

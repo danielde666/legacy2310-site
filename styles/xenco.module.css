@@ -582,6 +582,8 @@
 } 
 
 
+/* Place all mobile-specific media queries and overrides below, ordered from largest to smallest */
+
 @media (max-width: 990px) {
     .xencoPage .page {
         width: auto;

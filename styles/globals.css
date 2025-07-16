@@ -95,6 +95,12 @@ body.custom-cursor-active * {
   animation: spin 1s linear infinite;
 }
 
+/* Place all mobile-specific media queries and overrides below, ordered from largest to smallest */
+
+/* Example: (add your actual mobile queries here) */
+/* @media (max-width: 900px) { ... } */
+/* @media (max-width: 600px) { ... } */
+
 
 
 
