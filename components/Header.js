@@ -13,7 +13,7 @@ export default function Header() {
           className="text-white text-2xl font-bold hover:text-gray-300 transition"
         >
             <img
-                src='../2310.svg'
+                src='../aiwrap-white.svg'
                 alt='Ai Wrap'
                 className="w-24 h-24 mx-auto object-contain"
             />
